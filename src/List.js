@@ -1,27 +1,25 @@
 import Card from './Card'
 import React from 'react';
 
-function List(props){
-    
+// function List(props) {
+//     return (
+//         <section className='List'>
+//             <header className='List-cards'><h2>{props.header}</h2></header>
+//             <div className='List-cards'>{props.card.map(card => <Card key={card.id} title={card.title} content={card.content} />)}
+//             <button type="button" className="List-add-button">+ Add Random Card</button>
+//             </div>
+//         </section>
+//     )
+//     //section class 'list'
+// }
 
+export default function List(props) {
     return (
-    <section className = 'List'>
-        <header className='List-cards'>{props.header}</header>
-    <div className='List-cards'>{props.card.map(card => <Card key={card.id} title={card.title} content={card.content}/>)}
-    </div>
-    </section>
-
-
+        <section className='List'>
+             <header className='List-cards'><h2>{props.header}</h2></header>
+             <div className='List-cards'>{props.cards.map(card => <Card key={card.id} title={card.title} content={card.content} />)}
+             <button type="button" className="List-add-button">+ Add Random Card</button>
+             </div>
+         </section>
     )
-
-//section class 'list'
-
-
-}
-
-
-
-
-
-
-export default {List};
+} ;
